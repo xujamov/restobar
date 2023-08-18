@@ -24,7 +24,7 @@ const SearchBox = ({history, item}) => {
                 type='text'
                 name='q'
                 onChange={(e) => setKeyword(e.target.value)}
-                placeholder='Search...'
+                placeholder='Qidirish...'
                 className='form-control mr-sm-2 nl-sn-5'
                 />
                 <button
@@ -32,7 +32,7 @@ const SearchBox = ({history, item}) => {
                         variant='primary'
                         className='btn btn-primary p-2'
                         >
-                        Search
+                        Qidirish
                 </button>
         </div>
 

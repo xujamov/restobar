@@ -57,7 +57,7 @@ const OrderCart = ({ productsInOrder, setProductsInOrder }) => {
                             </button>
                         </td>
                         <td className="h6">
-                            ${productIn.price * productIn.quantity}
+                            {productIn.price * productIn.quantity}
                         </td>
                         <td>
                             <button
@@ -80,11 +80,11 @@ const OrderCart = ({ productsInOrder, setProductsInOrder }) => {
             >
                 <thead>
                     <tr>
+                        <th>Mahsulot</th>
+                        <th>Birlik</th>
                         <th className="d-none d-sm-table-cell"></th>
-                        <th>Product</th>
-                        <th>Units</th>
+                        <th>Jami</th>
                         <th></th>
-                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>{renderCart()}</tbody>

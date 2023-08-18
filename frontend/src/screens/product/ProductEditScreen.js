@@ -87,10 +87,10 @@ const ProductEditScreen = ({ history, match }) => {
         }
 
         if (!stock) {
-            errorsCheck.stock = "Stock is required";
+            errorsCheck.stock = "Zaxirani kiriting";
         }
         if (!category) {
-            errorsCheck.category = "Category is required";
+            errorsCheck.category = "Kategoriyani kiriting";
         }
 
         if (Object.keys(errorsCheck).length > 0) {
@@ -128,7 +128,7 @@ const ProductEditScreen = ({ history, match }) => {
     const renderForm = () => (
         <form onSubmit={handleSubmit}>
             <Input
-                name={"name"}
+                name={"nomi"}
                 type={"text"}
                 data={name}
                 setData={setName}
@@ -136,7 +136,7 @@ const ProductEditScreen = ({ history, match }) => {
             />
 
             <Input
-                name={"price"}
+                name={"narxi"}
                 type={"number"}
                 data={price}
                 setData={setPrice}
@@ -144,7 +144,7 @@ const ProductEditScreen = ({ history, match }) => {
             />
 
             <Input
-                name={"stock"}
+                name={"zaxira"}
                 type={"number"}
                 data={stock}
                 setData={setStock}
@@ -158,7 +158,7 @@ const ProductEditScreen = ({ history, match }) => {
 
             <hr />
             <button type="submit" className="btn btn-success">
-                Submit
+                Yuborish
             </button>
         </form>
     );
@@ -166,7 +166,7 @@ const ProductEditScreen = ({ history, match }) => {
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Products"} />
+            <HeaderContent name={"Mahsulotlar"} />
 
             {/* Main content */}
             <section className="content">
@@ -176,7 +176,7 @@ const ProductEditScreen = ({ history, match }) => {
                         <div className="col-12 col-md-6">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Edit Product</h3>
+                                    <h3 className="card-title">Mahsulotni o'zgartirish</h3>
                                 </div>
                                 {/* /.card-header */}
                                 <div className="card-body">

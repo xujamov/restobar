@@ -36,7 +36,7 @@ const ProductsTable = ({
         if (!inOrder(productIn, productsInOrder)) {
             setProductsInOrder([...productsInOrder, productIn]);
         } else {
-            alert("Product already in order");
+            alert("Mahsulot buyurtma qilingan");
         }
     };
 
@@ -114,10 +114,10 @@ const ProductsTable = ({
                 className="bg-info"
             >
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Stock</th>
+                    <th>Raqami</th>
+                    <th>Nomi</th>
+                    <th>Narxi</th>
+                    <th>Zaxira</th>
                     <th></th>
                 </tr>
             </thead>
@@ -126,7 +126,7 @@ const ProductsTable = ({
                     <tr key={product.id}>
                         <td>{product.id}</td>
                         <td>{product.name}</td>
-                        <td>${product.price}</td>
+                        <td>{product.price} so'm</td>
                         <td>{showStock(product)}</td>
                         {inOrder(product, productsInOrder) ? (
                             <td className="text-center">
@@ -146,7 +146,7 @@ const ProductsTable = ({
                         ) : (
                             <td className="text-center">
                                 <button disabled className="btn btn-danger">
-                                    Out of Stock
+                                    Sotuvda yo'q
                                 </button>
                             </td>
                         )}

@@ -153,7 +153,7 @@ const ClientEditScreen = ({ history, match }) => {
 
             <hr />
             <button type="submit" className="btn btn-success">
-                Submit
+                Yuborish
             </button>
         </form>
     );

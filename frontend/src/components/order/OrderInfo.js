@@ -20,12 +20,12 @@ const OrderInfo = ({ productsInOrder, total, setTotal }) => {
     return (
         <div className="small-box bg-success">
             <div className="inner">
-                <h3>TOTAL $ {total}</h3>
+                <h3>JAMI {total} so'm</h3>
                 <p>
-                    {productsInOrder.length > 0
+                    Buyurtmada {productsInOrder.length > 0
                         ? totalItems(productsInOrder)
                         : 0}{" "}
-                    Items in Order
+                    ta mahsulot
                 </p>
             </div>
             <div className="icon">

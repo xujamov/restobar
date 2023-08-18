@@ -14,7 +14,7 @@ const Table = ({ table }) => {
                 <div className="inner">
                     <h3>{table.name}</h3>
                     <p>
-                        Orders ID:{" "}
+                        Buyurtma Raqami:{" "}
                         {table.orders.map((order) => {
                             return order.id;
                         })}
@@ -24,7 +24,7 @@ const Table = ({ table }) => {
                     <i className="fas fa-user-friends"></i>
                 </div>
                 <div className="small-box-footer">
-                    More info <i className="fa fa-arrow-circle-right" />
+                    Batafsil ma'lumot <i className="fa fa-arrow-circle-right" />
                 </div>
             </div>
         </Link>

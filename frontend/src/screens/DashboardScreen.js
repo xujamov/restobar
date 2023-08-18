@@ -112,19 +112,19 @@ const DashboardScreen = ({ history }) => {
         <>
             <SmallBox
                 number={orders.length}
-                paragraph={"Active orders"}
+                paragraph={"Faol buyurtmalar"}
                 link={"order"}
                 color={"success"}
                 icon={"fas fa-utensils"}
             />
 
-            <SmallBox
-                number={ordersInPlace(orders).length}
-                paragraph={"In Place Orders"}
-                link={"active"}
-                color={"info"}
-                icon={"fas fa-users"}
-            />
+            {/*<SmallBox*/}
+            {/*    number={ordersInPlace(orders).length}*/}
+            {/*    paragraph={"In Place Orders"}*/}
+            {/*    link={"active"}*/}
+            {/*    color={"info"}*/}
+            {/*    icon={"fas fa-users"}*/}
+            {/*/>*/}
             {/*<SmallBox*/}
             {/*    number={ordersForDelivery(orders).length}*/}
             {/*    paragraph={"Orders for delivery"}*/}
@@ -135,7 +135,7 @@ const DashboardScreen = ({ history }) => {
 
             <SmallBox
                 number={orders.length}
-                paragraph={"Total orders"}
+                paragraph={"Jami buyurtmalar"}
                 link={"order"}
                 color={"warning"}
                 icon={"ion ion-bag"}
@@ -174,7 +174,7 @@ const DashboardScreen = ({ history }) => {
             <div className="col-12 col-lg-6">
                 <div className="card">
                     <div className="card-header border-0">
-                        <h3 className="card-title">Restobar Overview</h3>
+                        <h3 className="card-title">Restobar Statistika</h3>
                     </div>
                     <div className="card-body">
                         <div className="d-flex justify-content-between align-items-center border-bottom mb-3">
@@ -187,7 +187,7 @@ const DashboardScreen = ({ history }) => {
                                     {statistics && statistics.orders}
                                 </span>
                                 <span className="text-muted">
-                                    TOTAL ORDERS COMPLETED
+                                    UMUMIY TUGALLANGAN BUYURTMALAR
                                 </span>
                             </p>
                         </div>
@@ -213,11 +213,10 @@ const DashboardScreen = ({ history }) => {
                             <p className="d-flex flex-column text-right">
                                 <span className="font-weight-bold">
                                     <span className="text-success">
-                                        <i className="fas fa-dollar-sign text-success"></i>{" "}
-                                        {statistics && statistics.today}
+                                        {statistics && statistics.today}<i className="text-success"> so'm</i>
                                     </span>
                                 </span>
-                                <span className="text-muted">TODAY SALES</span>
+                                <span className="text-muted">BUGUNGI SAVDO</span>
                             </p>
                         </div>
                         {/* /.d-flex */}
@@ -228,11 +227,10 @@ const DashboardScreen = ({ history }) => {
                             <p className="d-flex flex-column text-right">
                                 <span className="font-weight-bold">
                                     <span className="text-success">
-                                        <i className="fas fa-dollar-sign"></i>{" "}
-                                        {statistics && statistics.total}
+                                        {statistics && statistics.total}<i className="text-success"> so'm</i>
                                     </span>
                                 </span>
-                                <span className="text-muted">TOTAL SALES</span>
+                                <span className="text-muted">UMUMIY SAVDOLAR</span>
                             </p>
                         </div>
                         {/* /.d-flex */}
@@ -246,9 +244,9 @@ const DashboardScreen = ({ history }) => {
         <table className="table m-0 table-hover">
             <thead>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Table</th>
-                    <th>Total</th>
+                    <th>Buyurtma raqami</th>
+                    <th>Stol</th>
+                    <th>Jami</th>
                 </tr>
             </thead>
             <tbody>
@@ -273,7 +271,7 @@ const DashboardScreen = ({ history }) => {
                             <td>
                                 <h4>
                                     <span className={"badge bg-success"}>
-                                        ${order.total}
+                                        {order.total} so'm
                                     </span>
                                 </h4>
                             </td>
@@ -297,7 +295,7 @@ const DashboardScreen = ({ history }) => {
 
     return (
         <>
-            <HeaderContent name={"Dashboard"} />
+            <HeaderContent name={"Boshqaruv paneli"} />
 
             <section className="content">
                 <div className="container-fluid">
@@ -324,7 +322,7 @@ const DashboardScreen = ({ history }) => {
                             <div className="card">
                                 <div className="card-header border-transparent">
                                     <h3 className="card-title">
-                                        Latest In Place Orders
+                                        Eng so'nggi buyurtmalar
                                     </h3>
                                     <div className="card-tools">
                                         <button
@@ -351,13 +349,13 @@ const DashboardScreen = ({ history }) => {
                                         to={"/order/create"}
                                         className="btn btn-sm btn-info float-left"
                                     >
-                                        Place New Order
+                                        Yangi Buyurtma berish
                                     </Link>
                                     <Link
                                         to={"/order"}
                                         className="btn btn-sm btn-secondary float-right"
                                     >
-                                        View All Orders
+                                        Barcha buyurtmalarni ko'rish
                                     </Link>
                                 </div>
                             </div>

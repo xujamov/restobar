@@ -112,32 +112,32 @@ const UserEditScreen = ({ history, match }) => {
     const renderForm = () => (
         <form onSubmit={handleSubmit}>
             <Input
-                name={"name"}
+                name={"ismi"}
                 type={"text"}
                 data={name}
                 setData={setName}
                 errors={errors}
             />
             <Input
-                name={"email"}
+                name={"pochta"}
                 type={"email"}
                 data={email}
                 setData={setEmail}
                 errors={errors}
             />
             <Input
-                name={"password"}
+                name={"parol"}
                 type={"password"}
                 data={password}
                 setData={setPassword}
                 errors={errors}
             />
-            <Checkbox name={"Reset Avatar"} data={avatar} setData={setAvatar} />
+            <Checkbox name={"Avatarni avvalgi holatga qaytarish"} data={avatar} setData={setAvatar} />
             <hr />
             <Checkbox name={"Admin"} data={isAdmin} setData={setIsAdmin} />
             <hr />
             <button type="submit" className="btn btn-success">
-                Submit
+                Yuborish
             </button>
         </form>
     );
@@ -145,7 +145,7 @@ const UserEditScreen = ({ history, match }) => {
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Users"} />
+            <HeaderContent name={"Foydalanuvchilar"} />
 
             {/* Main content */}
 
@@ -156,7 +156,7 @@ const UserEditScreen = ({ history, match }) => {
                         <div className="col-12 col-md-6">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Edit User</h3>
+                                    <h3 className="card-title">Foydalanuvchini O'zgartirish</h3>
                                 </div>
                                 {/* /.card-header */}
                                 <div className="card-body">

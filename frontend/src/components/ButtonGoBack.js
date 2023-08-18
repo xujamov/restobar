@@ -7,7 +7,7 @@ const ButtonGoBack = ({ history }) => {
 
     return (
         <button onClick={handleClick} className="btn btn-info btn-lg mb-2">
-            Go Back
+            Ortga qaytish
         </button>
     );
 };

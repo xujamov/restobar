@@ -276,7 +276,7 @@ const ProfileScreen = ({ history }) => {
                 />
                 <hr />
                 <button type="submit" className="btn btn-primary">
-                    Submit
+                    Yuborish
                 </button>
 
                 <ModalButton

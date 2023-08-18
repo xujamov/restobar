@@ -22,7 +22,7 @@ const SearchBoxMini = ({history, item}) => {
                 name="table_search"
                 onChange={(e) => setKeyword(e.target.value)} 
                 className="form-control float-right" 
-                placeholder="Search" 
+                placeholder="Qidirish"
                 />
             <div className="input-group-append">
                 <button onClick={(e) => submitHandler(e)} type="submit" className="btn btn-default bg-primary"><i className="fas fa-search" /></button>

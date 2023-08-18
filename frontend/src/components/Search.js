@@ -20,7 +20,7 @@ const Search = ({ keyword, setKeyword, setPage }) => {
                 name="table_search"
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="form-control float-right"
-                placeholder="Search"
+                placeholder="Qidirish"
                 onKeyPress={handleKeyPress}
             />
             <div className="input-group-append">

@@ -65,7 +65,7 @@ const Menu = ({ history }) => {
                         <li className="nav-item">
                             <Link to="/dashboard" className="nav-link">
                                 <i className="nav-icon fas fa-tachometer-alt" />{" "}
-                                <p> Dashboard</p>
+                                <p> Boshqaruv paneli</p>
                             </Link>
                         </li>
 
@@ -77,7 +77,7 @@ const Menu = ({ history }) => {
                                 <li className="nav-item">
                                     <Link to="/user" className="nav-link">
                                         <i className="nav-icon fas fa-users" />{" "}
-                                        <p> Users</p>
+                                        <p> Foydalanuvchilar</p>
                                     </Link>
                                 </li>
                             </>
@@ -89,14 +89,14 @@ const Menu = ({ history }) => {
                         <li className="nav-item">
                             <Link to="/active" className="nav-link">
                                 <i className="nav-icon fas fa-bell" />{" "}
-                                <p> Active Orders</p>
+                                <p> Faol buyurtmalar</p>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link to="/order" className="nav-link">
                                 <i className="nav-icon far fa-clipboard" />{" "}
-                                <p> Orders</p>
+                                <p> Buyurtmalar</p>
                             </Link>
                         </li>
 
@@ -105,21 +105,21 @@ const Menu = ({ history }) => {
                         <li className="nav-item">
                             <Link to="/category" className="nav-link">
                                 <i className="nav-icon fas fa-list-alt" />{" "}
-                                <p> Categories</p>
+                                <p> Kategoriyalar</p>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link to="/product" className="nav-link">
                                 <i className="nav-icon fas fa-hamburger" />{" "}
-                                <p> Products</p>
+                                <p> Mahsulotlar</p>
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link to="/table" className="nav-link">
                                 <i className="nav-icon fas fa-border-all" />{" "}
-                                <p> Tables</p>
+                                <p> Stollar</p>
                             </Link>
                         </li>
                     </ul>

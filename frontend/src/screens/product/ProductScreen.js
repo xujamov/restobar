@@ -78,10 +78,10 @@ const ProductScreen = ({ history }) => {
         }
 
         if (!stock) {
-            errorsCheck.stock = "Stock is required";
+            errorsCheck.stock = "Zaxirani kiriting";
         }
         if (!category) {
-            errorsCheck.category = "Category is required";
+            errorsCheck.category = "Kategoriyani kiriting";
         }
 
         if (Object.keys(errorsCheck).length > 0) {
@@ -157,7 +157,7 @@ const ProductScreen = ({ history }) => {
                     )}
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
                     <ModalButton
                         modal={modalIsOpen}
@@ -173,12 +173,12 @@ const ProductScreen = ({ history }) => {
         <table className="table table-hover text-nowrap">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Stock</th>
-                    <th className="d-none d-sm-table-cell">Created At</th>
-                    <th className="d-none d-sm-table-cell">Category</th>
+                    <th>Raqami</th>
+                    <th>Nomi</th>
+                    <th>Narxi</th>
+                    <th>Zaxira</th>
+                    <th className="d-none d-sm-table-cell">Yaratilgan Vaqti</th>
+                    <th className="d-none d-sm-table-cell">Kategoriya</th>
                     <th></th>
                 </tr>
             </thead>
@@ -200,7 +200,7 @@ const ProductScreen = ({ history }) => {
                                 to={`/product/${product.id}/edit`}
                                 className="btn btn-warning btn-lg"
                             >
-                                Edit
+                                O'zgartirish
                             </Link>
                         </td>
                     </tr>
@@ -211,7 +211,7 @@ const ProductScreen = ({ history }) => {
 
     return (
         <>
-            <HeaderContent name={"Products"} />
+            <HeaderContent name={"Mahsulotlar"} />
             {/* Main content */}
 
             <section className="content">
@@ -223,7 +223,7 @@ const ProductScreen = ({ history }) => {
                             <div className="card">
                                 <div className="card-header">
                                     <h3 className="card-title">
-                                        Products table
+                                        Mahsulotlar jadvali
                                     </h3>
                                     <div className="card-tools">
                                         <Search

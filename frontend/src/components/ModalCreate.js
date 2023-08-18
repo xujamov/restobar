@@ -82,7 +82,7 @@ const ModalCreate = ({
 
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
                     <button
                         className="btn btn-danger float-right"

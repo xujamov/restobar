@@ -12,7 +12,7 @@ const SmallBox = ({number, paragraph, link, color, icon}) => {
             <div className="icon">
                 <i className={icon} />
             </div>
-            <Link to={`/${link}`} className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
+            <Link to={`/${link}`} className="small-box-footer">Batafsil ma'lumot <i className="fas fa-arrow-circle-right" /></Link>
             </div>
         </div>
      );

@@ -96,12 +96,12 @@ const UserScreen = ({ history }) => {
         <table className="table table-hover text-nowrap">
             <thead>
                 <tr>
-                    <th className="d-none d-sm-table-cell">ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th className="d-none d-sm-table-cell">Photo</th>
+                    <th className="d-none d-sm-table-cell">Raqami</th>
+                    <th>Nomi</th>
+                    <th>Pochta</th>
+                    <th className="d-none d-sm-table-cell">Rasm</th>
                     <th className="d-none d-sm-table-cell">Admin</th>
-                    <th className="d-none d-sm-table-cell">Created At</th>
+                    <th className="d-none d-sm-table-cell">Yaratilgan vaqti</th>
                     <th></th>
                 </tr>
             </thead>
@@ -147,7 +147,7 @@ const UserScreen = ({ history }) => {
                                     to={`/user/${user.id}/edit`}
                                     className="btn btn-warning btn-lg"
                                 >
-                                    Edit
+                                    O'zgartirish
                                 </Link>
                             )}
                         </td>
@@ -201,7 +201,7 @@ const UserScreen = ({ history }) => {
 
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
                     <ModalButton
                         modal={modalIsOpen}
@@ -216,7 +216,7 @@ const UserScreen = ({ history }) => {
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Users"} />
+            <HeaderContent name={"Foydalanuvchilar"} />
             {/* Main content */}
 
             <section className="content">
@@ -226,7 +226,7 @@ const UserScreen = ({ history }) => {
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Users table</h3>
+                                    <h3 className="card-title">Foydalanuvchilar jadvali</h3>
                                     <div className="card-tools">
                                         <Search
                                             keyword={keyword}

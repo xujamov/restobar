@@ -52,7 +52,7 @@ const TableCrud = ({ data, itemLink }) => {
                               <td className="text-center">
                                   <Link to={`/${itemLink}/${item["id"]}/edit`}>
                                       <button className="btn btn-warning">
-                                          Edit
+                                          O'zgartirish
                                       </button>
                                   </Link>
                               </td>

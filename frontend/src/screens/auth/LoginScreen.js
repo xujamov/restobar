@@ -106,7 +106,7 @@ const LoginScreen = ({ history }) => {
                                 </button>
                                 <h5>
                                     <i className="icon fas fa-info" /> Test
-                                    Users
+                                    Foydalanuvchilar
                                 </h5>
                                 <p>admin@example.com</p>
                                 <p>user@example.com</p>

@@ -7,7 +7,7 @@ const ModalButton = ({modal, setModal, classes}) => {
                 className={`btn ${classes}`}
                 onClick={() => setModal(!modal)}
               >
-              {modal ? 'Close' : 'Create'}
+              {modal ? 'Yopish' : 'Yaratish'}
             </button>
         </>
      );

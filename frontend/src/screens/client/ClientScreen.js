@@ -154,7 +154,7 @@ const ClientScreen = ({ history }) => {
                     />
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
                     <ModalButton
                         modal={modalIsOpen}

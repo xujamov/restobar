@@ -59,7 +59,7 @@ const TableScreen = ({ history }) => {
         let errorsCheck = {};
 
         if (!name) {
-            errorsCheck.name = "Name is required";
+            errorsCheck.name = "Nomini kiriting";
         }
 
         if (Object.keys(errorsCheck).length > 0) {
@@ -82,10 +82,10 @@ const TableScreen = ({ history }) => {
             <table className="table table-hover text-nowrap">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Occupied</th>
-                        <th className="d-none d-sm-table-cell">Created At</th>
+                        <th>Tartib</th>
+                        <th>Nomi</th>
+                        <th>Band</th>
+                        <th className="d-none d-sm-table-cell">Yaratilgan vaqti</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -113,7 +113,7 @@ const TableScreen = ({ history }) => {
                                     to={`/table/${table.id}/edit`}
                                     className="btn btn-warning btn-lg"
                                 >
-                                    Edit
+                                    O'zgartirish
                                 </Link>
                             </td>
                         </tr>
@@ -147,7 +147,7 @@ const TableScreen = ({ history }) => {
                     />
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
 
                     <ModalButton
@@ -162,7 +162,7 @@ const TableScreen = ({ history }) => {
 
     return (
         <>
-            <HeaderContent name={"Tables"} />
+            <HeaderContent name={"Stollar"} />
             {/* Main content */}
 
             <section className="content">
@@ -173,7 +173,7 @@ const TableScreen = ({ history }) => {
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Tables</h3>
+                                    <h3 className="card-title">Stollar</h3>
                                     <div className="card-tools">
                                         <Search
                                             keyword={keyword}

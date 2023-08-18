@@ -191,7 +191,7 @@ const OrderEditScreen = ({ history, match }) => {
 
     const renderNoteTextarea = () => (
         <Textarea
-            title={"Note (optional)"}
+            title={"Eslatma (ixtiyoriy)"}
             rows={3}
             data={note}
             setData={setNote}
@@ -203,14 +203,14 @@ const OrderEditScreen = ({ history, match }) => {
             onClick={handleSubmit}
             className="btn btn-success btn-lg float-right "
         >
-            Submit
+            Yuborish
         </button>
     );
 
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Orders"} />
+            <HeaderContent name={"Buyurtmalar"} />
 
             {/* Main content */}
             <section className="content">
@@ -220,7 +220,7 @@ const OrderEditScreen = ({ history, match }) => {
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Create Order</h3>
+                                    <h3 className="card-title">Buyurtma yaratish</h3>
                                     <Loader variable={loadingUpdate} />
                                     <Message
                                         message={errorUpdate}

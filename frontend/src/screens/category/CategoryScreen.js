@@ -87,11 +87,11 @@ const CategoryScreen = ({ history, match }) => {
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
             >
-                <h2>Create Form</h2>
+                <h2>Kategoriya yaratish</h2>
                 <LoaderHandler loading={createLoading} error={createError} />
                 <form onSubmit={handleSubmit}>
                     <Input
-                        name={"name"}
+                        name={"nomi"}
                         type={"text"}
                         data={name}
                         setData={setName}
@@ -100,7 +100,7 @@ const CategoryScreen = ({ history, match }) => {
 
                     <hr />
                     <button type="submit" className="btn btn-primary">
-                        Submit
+                        Yuborish
                     </button>
 
                     <ModalButton
@@ -119,7 +119,7 @@ const CategoryScreen = ({ history, match }) => {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th className="d-none d-sm-table-cell">Created At</th>
+                    <th className="d-none d-sm-table-cell">Yaratilgan Vaqti</th>
                     <th></th>
                 </tr>
             </thead>
@@ -136,7 +136,7 @@ const CategoryScreen = ({ history, match }) => {
                                 to={`/category/${category.id}/edit`}
                                 className="btn btn-warning btn-lg"
                             >
-                                Edit
+                                O'zgartirish
                             </Link>
                         </td>
                     </tr>
@@ -147,7 +147,7 @@ const CategoryScreen = ({ history, match }) => {
 
     return (
         <>
-            <HeaderContent name={"Categories"} />
+            <HeaderContent name={"Kategoriyalar"} />
 
             {/* Main content */}
 
@@ -159,7 +159,7 @@ const CategoryScreen = ({ history, match }) => {
                         <div className="col-12">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Categories</h3>
+                                    <h3 className="card-title">Kategoriyalar</h3>
                                     <div className="card-tools">
                                         <Search
                                             keyword={keyword}

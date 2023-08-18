@@ -101,7 +101,7 @@ const CategoryEditScreen = ({ history, match }) => {
             />
             <hr />
             <button type="submit" className="btn btn-success">
-                Submit
+                Yuborish
             </button>
         </form>
     );
@@ -109,7 +109,7 @@ const CategoryEditScreen = ({ history, match }) => {
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Categories"} />
+            <HeaderContent name={"Kategoriyalar"} />
             {/* Main content */}
 
             <section className="content">
@@ -120,7 +120,7 @@ const CategoryEditScreen = ({ history, match }) => {
                             <div className="card">
                                 <div className="card-header">
                                     <h3 className="card-title">
-                                        Edit Category
+                                        Kategoriyani o'zgartirish
                                     </h3>
                                 </div>
                                 {/* /.card-header */}

@@ -66,11 +66,11 @@ const OrderViewScreen = ({ history, match }) => {
             isOpen={modal}
             onRequestClose={() => setModal(false)}
         >
-            <h2 className="text-center">Order Payment</h2>
-            <p className="text-center">Is order already paid?.</p>
+            <h2 className="text-center">Buyurtma to'lash</h2>
+            <p className="text-center">Buyurtma to'landimi?</p>
             <form onSubmit={handlePay}>
                 <button type="submit" className="btn btn-primary">
-                    Yes, close order.
+                    Ha to'landi
                 </button>
 
                 <ModalButton
@@ -109,12 +109,12 @@ const OrderViewScreen = ({ history, match }) => {
         order.products && (
             <div className="small-box bg-info">
                 <div className="inner">
-                    <h3>TOTAL ${order.total}</h3>
+                    <h3>JAMI {order.total} so'm</h3>
                     <p>
-                        {order.products.length > 0
+                        Buyurtmada {order.products.length > 0
                             ? totalItems(order.products)
                             : 0}{" "}
-                        Items in Order
+                        ta mahsulot
                     </p>
                 </div>
                 <div className="icon">
@@ -130,10 +130,10 @@ const OrderViewScreen = ({ history, match }) => {
         >
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
+                    <th>Mahsulot</th>
+                    <th>Miqdori</th>
+                    <th>Narxi</th>
+                    <th>Jami</th>
                 </tr>
             </thead>
             <tbody>
@@ -150,14 +150,14 @@ const OrderViewScreen = ({ history, match }) => {
                             </td>
                             <td className="text-center h4">
                                 <span className="badge bg-info">
-                                    ${product.price}
+                                    {product.price} so'm
                                 </span>
                             </td>
                             <td className="text-center h4">
                                 <span className={"badge bg-success"}>
-                                    $
                                     {product.price *
                                         product.OrderProduct.quantity}{" "}
+                                    so'm
                                 </span>
                             </td>
                         </tr>
@@ -173,7 +173,7 @@ const OrderViewScreen = ({ history, match }) => {
                     <div className="col-12 col-md-6">
                         <ViewBox
                             title={order.id}
-                            paragraph={"ORDER ID"}
+                            paragraph={"BUYURTMA RAQAMI"}
                             icon={"far fa-clipboard"}
                             color={"bg-info"}
                         />
@@ -182,8 +182,8 @@ const OrderViewScreen = ({ history, match }) => {
                     {order.isPaid ? (
                         <div className="col-12 col-md-6">
                             <ViewBox
-                                title={"Paid"}
-                                paragraph={"Order is already paid"}
+                                title={"To'langan"}
+                                paragraph={"Buyurtma allaqachon to'langan"}
                                 icon={"fas fa-check"}
                                 color={"bg-success"}
                             />
@@ -191,8 +191,8 @@ const OrderViewScreen = ({ history, match }) => {
                     ) : (
                         <div className="col-12 col-md-6">
                             <ViewBox
-                                title={"Not Paid"}
-                                paragraph={"Order is still not paid"}
+                                title={"Toʻlanmagan"}
+                                paragraph={"Buyurtma to'lanmagan"}
                                 icon={"far fa-times-circle"}
                                 color={"bg-danger"}
                             />
@@ -203,7 +203,7 @@ const OrderViewScreen = ({ history, match }) => {
                         <div className="col-12 col-md-6">
                             <ViewBox
                                 title={order.table.name}
-                                paragraph={`ID: ${order.table.id}`}
+                                paragraph={`RAQAMI: ${order.table.id}`}
                                 icon={"fas fa-utensils"}
                                 color={"bg-info"}
                             />
@@ -224,7 +224,7 @@ const OrderViewScreen = ({ history, match }) => {
 
                 <div className="col-12">
                     <ViewBox
-                        title={"Note:"}
+                        title={"Eslatma:"}
                         paragraph={order.note}
                         icon={"far fa-sticky-note"}
                         color={"bg-silver"}
@@ -235,12 +235,12 @@ const OrderViewScreen = ({ history, match }) => {
 
     const renderOrderEdit = () => (
         <div className="card">
-            <div className="card-header bg-warning">Edit Order</div>
+            <div className="card-header bg-warning">Buyurtmani o'zgartirish</div>
             <div className="card-body">
                 <button className="btn btn-block" onClick={handleEdit}>
                     <ViewBox
-                        title={`Edit Order`}
-                        paragraph={`Click to Edit`}
+                        title={`O'zgartirish`}
+                        paragraph={`Tugmani bosing`}
                         icon={"fas fa-edit"}
                         color={"bg-warning"}
                     />
@@ -251,15 +251,15 @@ const OrderViewScreen = ({ history, match }) => {
 
     const renderOrderPay = () => (
         <div className="card">
-            <div className="card-header bg-success">Update to Paid</div>
+            <div className="card-header bg-success">Buyurtmani to'lash</div>
             <div className="card-body">
                 <button
                     className="btn btn-block"
                     onClick={() => setModal(true)}
                 >
                     <ViewBox
-                        title={`PAY $${order.total}`}
-                        paragraph={`Click to Pay`}
+                        title={`${order.total} so'm`}
+                        paragraph={`To'lash`}
                         icon={"fas fa-hand-holding-usd"}
                         color={"bg-success"}
                     />
@@ -294,7 +294,7 @@ const OrderViewScreen = ({ history, match }) => {
     return (
         <>
             {/* Content Header (Page header) */}
-            <HeaderContent name={"Orders"} />
+            <HeaderContent name={"Buyurtmalar"} />
             <LoaderHandler loading={loadingUpdate} error={errorUpdate} />
             {/* Main content */}
             <section className="content">
@@ -306,7 +306,7 @@ const OrderViewScreen = ({ history, match }) => {
 
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">View Order</h3>
+                                    <h3 className="card-title">Buyurtmani ko'rish</h3>
                                 </div>
                                 {/* /.card-header */}
                                 <div className="card-body">
