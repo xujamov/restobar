@@ -25,7 +25,6 @@ import { ORDER_CREATE_RESET } from "../../constants/orderConstants";
 
 /* Actions */
 import { listTables } from "../../actions/tableActions";
-import { listClients } from "../../actions/clientActions";
 import { createOrder } from "../../actions/orderActions";
 
 const OrderCreateScreen = ({ history, match }) => {
@@ -37,7 +36,6 @@ const OrderCreateScreen = ({ history, match }) => {
     const [table, setTable] = useState(
         tableFromUrl ? parseInt(match.params.id) : null
     );
-    const [client, setClient] = useState(null);
     const [delivery, setDelivery] = useState(deliveryFromUrl);
     const [note, setNote] = useState("");
     const [errors, setErrors] = useState({});
@@ -48,9 +46,6 @@ const OrderCreateScreen = ({ history, match }) => {
 
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
-
-    const clientList = useSelector((state) => state.clientList);
-    const { clients } = clientList;
 
     const tableList = useSelector((state) => state.tableList);
     const { tables } = tableList;
@@ -79,9 +74,6 @@ const OrderCreateScreen = ({ history, match }) => {
         if (!table && !delivery) {
             errorsCheck.table = "Table is required";
         }
-        if (!client) {
-            errorsCheck.client = "Client is required";
-        }
 
         if (productsInOrder.length < 1) {
             errorsCheck.products = "Cart cannot by empty";
@@ -99,7 +91,7 @@ const OrderCreateScreen = ({ history, match }) => {
             const order = {
                 total: total,
                 tableId: !delivery ? table : 0,
-                clientId: client,
+                clientId: 1,
                 products: productsInOrder,
                 delivery: delivery,
                 note: note,
@@ -160,24 +152,6 @@ const OrderCreateScreen = ({ history, match }) => {
         </>
     );
 
-    const searchClients = (e) => {
-        dispatch(listClients(e.target.value));
-    };
-
-    const renderClientsSelect = () => (
-        <>
-            <Select
-                data={client}
-                setData={setClient}
-                items={clients}
-                search={searchClients}
-            />
-            {errors.client && (
-                <Message message={errors.client} color={"warning"} />
-            )}
-        </>
-    );
-
     const renderDeliveryCheckbox = () => (
         <Checkbox name={"delivery"} data={delivery} setData={setDelivery} />
     );
@@ -228,9 +202,6 @@ const OrderCreateScreen = ({ history, match }) => {
                                             <div className="row">
                                                 <div className="col-12 col-md-6">
                                                     {renderTablesSelect()}
-                                                </div>
-                                                <div className="col-12 col-md-6">
-                                                    {renderClientsSelect()}
                                                 </div>
                                             </div>
                                             <div className="mt-4">
