@@ -145,32 +145,32 @@ const DashboardScreen = ({ history }) => {
 
     const renderSales = () => (
         <div className="row">
-            <div className="col-12 col-lg-6">
-                <div className="card">
-                    <div className="card-header border-0">
-                        <h3 className="card-title">Last Sales</h3>
-                        <div className="card-tools">
-                            <Link to="/order" className="btn btn-tool btn-sm">
-                                <i className="nav-icon far fa-clipboard" />
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="card-body table-responsive p-0">
-                        <table className="table table-striped table-valign-middle text-center">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Type</th>
-                                    <th>Total</th>
-                                    <th>Products</th>
-                                    <th>More</th>
-                                </tr>
-                            </thead>
-                            <tbody>{returnSales(sales)}</tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            {/*<div className="col-12 col-lg-6">*/}
+            {/*    <div className="card">*/}
+            {/*        <div className="card-header border-0">*/}
+            {/*            <h3 className="card-title">Last Sales</h3>*/}
+            {/*            <div className="card-tools">*/}
+            {/*                <Link to="/order" className="btn btn-tool btn-sm">*/}
+            {/*                    <i className="nav-icon far fa-clipboard" />*/}
+            {/*                </Link>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div className="card-body table-responsive p-0">*/}
+            {/*            <table className="table table-striped table-valign-middle text-center">*/}
+            {/*                <thead>*/}
+            {/*                    <tr>*/}
+            {/*                        <th>ID</th>*/}
+            {/*                        <th>Type</th>*/}
+            {/*                        <th>Total</th>*/}
+            {/*                        <th>Products</th>*/}
+            {/*                        <th>More</th>*/}
+            {/*                    </tr>*/}
+            {/*                </thead>*/}
+            {/*                <tbody>{returnSales(sales)}</tbody>*/}
+            {/*            </table>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="col-12 col-lg-6">
                 <div className="card">
                     <div className="card-header border-0">
@@ -247,7 +247,6 @@ const DashboardScreen = ({ history }) => {
             <thead>
                 <tr>
                     <th>Order ID</th>
-                    <th>Client</th>
                     <th>Table</th>
                     <th>Total</th>
                 </tr>
@@ -270,7 +269,6 @@ const DashboardScreen = ({ history }) => {
                                     </span>
                                 </h4>
                             </td>
-                            <td>{order.client ? order.client.name : ""}</td>
                             <td>{order.table ? order.table.name : ""}</td>
                             <td>
                                 <h4>
