@@ -41,7 +41,6 @@ const OrderScreen = ({ history }) => {
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Client</th>
                     <th className="d-none d-sm-table-cell">Table</th>
                     <th>Paid</th>
                     <th>Total</th>
@@ -52,7 +51,6 @@ const OrderScreen = ({ history }) => {
                 {orders.map((order) => (
                     <tr key={order.id}>
                         <td>{order.id}</td>
-                        <td>{order.client.name}</td>
                         <td className="d-none d-sm-table-cell h4">
                             {order.table ? (
                                 <span className={"badge bg-primary"}>

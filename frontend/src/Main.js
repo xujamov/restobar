@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 /* SCREENS */
 import OrderScreen from "./screens/order/OrderScreen";
-import DeliveryScreen from "./screens/order/DeliveryScreen";
+// import DeliveryScreen from "./screens/order/DeliveryScreen";
 import OrderCreateScreen from "./screens/order/OrderCreateScreen";
 import OrderViewScreen from "./screens/order/OrderViewScreen ";
 import ActiveOrdersScreen from "./screens/order/ActiveOrdersScreen";
@@ -65,7 +65,7 @@ const Main = () => {
                     />
                     <PrivateRoute path="/category" component={CategoryScreen} />
 
-                    <PrivateRoute path="/delivery" component={DeliveryScreen} />
+                    {/*<PrivateRoute path="/delivery" component={DeliveryScreen} />*/}
 
                     <PrivateRoute
                         path="/client/:id/edit"

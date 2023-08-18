@@ -94,12 +94,6 @@ const Menu = ({ history }) => {
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/delivery" className="nav-link">
-                                <i className="nav-icon fas fa-truck" />{" "}
-                                <p> Delivery</p>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
                             <Link to="/order" className="nav-link">
                                 <i className="nav-icon far fa-clipboard" />{" "}
                                 <p> Orders</p>
@@ -119,13 +113,6 @@ const Menu = ({ history }) => {
                             <Link to="/product" className="nav-link">
                                 <i className="nav-icon fas fa-hamburger" />{" "}
                                 <p> Products</p>
-                            </Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/client" className="nav-link">
-                                <i className="nav-icon fas fa-user" />{" "}
-                                <p> Clients</p>
                             </Link>
                         </li>
 

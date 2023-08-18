@@ -199,17 +199,6 @@ const OrderViewScreen = ({ history, match }) => {
                         </div>
                     )}
 
-                    <div className="col-12 col-md-6">
-                        {order.client && (
-                            <ViewBox
-                                title={order.client.name}
-                                paragraph={`ID: ${order.client.id}`}
-                                icon={"fas fa-user"}
-                                color={"bg-info"}
-                            />
-                        )}
-                    </div>
-
                     {order.table ? (
                         <div className="col-12 col-md-6">
                             <ViewBox

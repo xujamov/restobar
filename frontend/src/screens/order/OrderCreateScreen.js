@@ -31,12 +31,12 @@ const OrderCreateScreen = ({ history, match }) => {
     /* Get table from url */
     const tableFromUrl = window.location.href.indexOf("table") !== -1;
     /* Get delivery from url */
-    const deliveryFromUrl = window.location.href.indexOf("delivery") !== -1;
+    // const deliveryFromUrl = window.location.href.indexOf("delivery") !== -1;
 
     const [table, setTable] = useState(
         tableFromUrl ? parseInt(match.params.id) : null
     );
-    const [delivery, setDelivery] = useState(deliveryFromUrl);
+    // const [delivery, setDelivery] = useState(deliveryFromUrl);
     const [note, setNote] = useState("");
     const [errors, setErrors] = useState({});
     const [total, setTotal] = useState(0);
@@ -58,11 +58,12 @@ const OrderCreateScreen = ({ history, match }) => {
         if (success) {
             dispatch({ type: PRODUCT_LIST_RESET });
             dispatch({ type: ORDER_CREATE_RESET });
-            if (delivery) {
-                history.push("/delivery");
-            } else {
-                history.push("/active");
-            }
+            history.push("/active");
+            // if (delivery) {
+            //     history.push("/delivery");
+            // } else {
+            //     history.push("/active");
+            // }
         }
     }, [dispatch, history, success, error]);
 
@@ -71,7 +72,8 @@ const OrderCreateScreen = ({ history, match }) => {
 
         /* Set Errors */
         let errorsCheck = {};
-        if (!table && !delivery) {
+        // if (!table && !delivery) {
+        if (!table) {
             errorsCheck.table = "Table is required";
         }
 
@@ -90,10 +92,10 @@ const OrderCreateScreen = ({ history, match }) => {
             /* Create order */
             const order = {
                 total: total,
-                tableId: !delivery ? table : 0,
+                tableId: table,
                 clientId: 1,
                 products: productsInOrder,
-                delivery: delivery,
+                delivery: false,
                 note: note,
             };
             /* Make request */
@@ -143,7 +145,7 @@ const OrderCreateScreen = ({ history, match }) => {
                 data={table}
                 setData={setTable}
                 items={filterFreeTables(tables)}
-                disabled={delivery}
+                // disabled={delivery}
                 search={searchTables}
             />
             {errors.table && (
@@ -152,9 +154,9 @@ const OrderCreateScreen = ({ history, match }) => {
         </>
     );
 
-    const renderDeliveryCheckbox = () => (
-        <Checkbox name={"delivery"} data={delivery} setData={setDelivery} />
-    );
+    // const renderDeliveryCheckbox = () => (
+    //     <Checkbox name={"delivery"} data={delivery} setData={setDelivery} />
+    // );
 
     const renderNoteTextarea = () => (
         <Textarea
@@ -204,9 +206,9 @@ const OrderCreateScreen = ({ history, match }) => {
                                                     {renderTablesSelect()}
                                                 </div>
                                             </div>
-                                            <div className="mt-4">
-                                                {renderDeliveryCheckbox()}
-                                            </div>
+                                            {/*<div className="mt-4">*/}
+                                            {/*    {renderDeliveryCheckbox()}*/}
+                                            {/*</div>*/}
                                             {renderNoteTextarea()}
                                         </div>
                                     </div>

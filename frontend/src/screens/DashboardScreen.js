@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 /* Components */
 import HeaderContent from "./../components/HeaderContent";
 import SmallBox from "./../components/SmallBox";
-import DeliveryListItem from "../components/DeliveryListItem";
+// import DeliveryListItem from "../components/DeliveryListItem";
 import DataTableLoader from "../components/loader/DataTableLoader";
 import LoaderHandler from "../components/loader/LoaderHandler";
 
@@ -56,14 +56,14 @@ const DashboardScreen = ({ history }) => {
         return newSales;
     };
 
-    //get all delivery orders
-    const ordersForDelivery = (orders) => {
-        const ordersForDelivery = orders.filter(function (item) {
-            return item.delivery === true;
-        });
-
-        return ordersForDelivery;
-    };
+    // //get all delivery orders
+    // const ordersForDelivery = (orders) => {
+    //     const ordersForDelivery = orders.filter(function (item) {
+    //         return item.delivery === true;
+    //     });
+    //
+    //     return ordersForDelivery;
+    // };
 
     //table row click from in place orders
     const handleRowClick = (e, id) => {
@@ -125,13 +125,13 @@ const DashboardScreen = ({ history }) => {
                 color={"info"}
                 icon={"fas fa-users"}
             />
-            <SmallBox
-                number={ordersForDelivery(orders).length}
-                paragraph={"Orders for delivery"}
-                link={"delivery"}
-                color={"danger"}
-                icon={"fas fa-truck"}
-            />
+            {/*<SmallBox*/}
+            {/*    number={ordersForDelivery(orders).length}*/}
+            {/*    paragraph={"Orders for delivery"}*/}
+            {/*    link={"delivery"}*/}
+            {/*    color={"danger"}*/}
+            {/*    icon={"fas fa-truck"}*/}
+            {/*/>*/}
 
             <SmallBox
                 number={orders.length}
@@ -192,20 +192,20 @@ const DashboardScreen = ({ history }) => {
                             </p>
                         </div>
                         {/* /.d-flex */}
-                        <div className="d-flex justify-content-between align-items-center border-bottom mb-3">
-                            <p className="text-info text-xl">
-                                <i className="fas fa-truck"></i>
-                            </p>
-                            <p className="d-flex flex-column text-right">
-                                <span className="font-weight-bold">
-                                    <i className="ion ion-android-arrow-up text-info" />{" "}
-                                    {statistics && statistics.deliveries}
-                                </span>
-                                <span className="text-muted">
-                                    TOTAL DELIVERIES COMPLETED
-                                </span>
-                            </p>
-                        </div>
+                        {/*<div className="d-flex justify-content-between align-items-center border-bottom mb-3">*/}
+                        {/*    <p className="text-info text-xl">*/}
+                        {/*        <i className="fas fa-truck"></i>*/}
+                        {/*    </p>*/}
+                        {/*    <p className="d-flex flex-column text-right">*/}
+                        {/*        <span className="font-weight-bold">*/}
+                        {/*            <i className="ion ion-android-arrow-up text-info" />{" "}*/}
+                        {/*            {statistics && statistics.deliveries}*/}
+                        {/*        </span>*/}
+                        {/*        <span className="text-muted">*/}
+                        {/*            TOTAL DELIVERIES COMPLETED*/}
+                        {/*        </span>*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
                         <div className="d-flex justify-content-between align-items-center border-bottom mb-3">
                             <p className="text-success text-xl">
                                 <i className="fas fa-money-bill-wave"></i>
@@ -285,17 +285,17 @@ const DashboardScreen = ({ history }) => {
         </table>
     );
 
-    const renderDeliveries = () =>
-        ordersForDelivery(orders)
-            .splice(0, 5)
-            .map((order) => (
-                <DeliveryListItem
-                    id={order.id}
-                    name={order.client ? order.client.name : ""}
-                    address={order.client ? order.client.address : ""}
-                    key={order.id}
-                />
-            ));
+    // const renderDeliveries = () =>
+    //     ordersForDelivery(orders)
+    //         .splice(0, 5)
+    //         .map((order) => (
+    //             <DeliveryListItem
+    //                 id={order.id}
+    //                 name={order.client ? order.client.name : ""}
+    //                 address={order.client ? order.client.address : ""}
+    //                 key={order.id}
+    //             />
+    //         ));
 
     return (
         <>
@@ -364,42 +364,42 @@ const DashboardScreen = ({ history }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-3">
-                            <div className="card">
-                                <div className="card-header">
-                                    <h3 className="card-title">
-                                        Recently Added Delivery Orders
-                                    </h3>
-                                    <div className="card-tools">
-                                        <button
-                                            type="button"
-                                            className="btn btn-tool"
-                                            data-card-widget="collapse"
-                                        >
-                                            <i className="fas fa-minus" />
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="card-body p-0">
-                                    <ul className="products-list product-list-in-card pl-2 pr-2">
-                                        <LoaderHandler
-                                            loading={loading}
-                                            loader={<DataTableLoader />}
-                                            error={error}
-                                            render={renderDeliveries}
-                                        />
-                                    </ul>
-                                </div>
-                                <div className="card-footer text-center">
-                                    <Link
-                                        to={"/delivery"}
-                                        className="uppercase"
-                                    >
-                                        View All Delivery Orders
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        {/*<div className="col-12 col-md-3">*/}
+                        {/*    <div className="card">*/}
+                        {/*        <div className="card-header">*/}
+                        {/*            <h3 className="card-title">*/}
+                        {/*                Recently Added Delivery Orders*/}
+                        {/*            </h3>*/}
+                        {/*            <div className="card-tools">*/}
+                        {/*                <button*/}
+                        {/*                    type="button"*/}
+                        {/*                    className="btn btn-tool"*/}
+                        {/*                    data-card-widget="collapse"*/}
+                        {/*                >*/}
+                        {/*                    <i className="fas fa-minus" />*/}
+                        {/*                </button>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="card-body p-0">*/}
+                        {/*            <ul className="products-list product-list-in-card pl-2 pr-2">*/}
+                        {/*                <LoaderHandler*/}
+                        {/*                    loading={loading}*/}
+                        {/*                    loader={<DataTableLoader />}*/}
+                        {/*                    error={error}*/}
+                        {/*                    render={renderDeliveries}*/}
+                        {/*                />*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="card-footer text-center">*/}
+                        {/*            <Link*/}
+                        {/*                to={"/delivery"}*/}
+                        {/*                className="uppercase"*/}
+                        {/*            >*/}
+                        {/*                View All Delivery Orders*/}
+                        {/*            </Link>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
                 {/* /.container-fluid */}
