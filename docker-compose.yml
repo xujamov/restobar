@@ -1,9 +1,8 @@
 version: "3"
 services:
     backend:
-        build:
-            context: .
-            dockerfile: Dockerfile
+        image: snackoff:latest
+        container_name: snackoff
         ports:
             - "5000:5000"
         environment:
